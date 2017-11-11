@@ -1,0 +1,11 @@
+node_modules
+test
+.tern-port
+.DS_Store
+build
+*.swp
+*.elc
+\#*
+tags
+*~
+*.elc
