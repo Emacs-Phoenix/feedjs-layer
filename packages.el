@@ -22,18 +22,23 @@
     (progn
       (spacemacs/set-leader-keys
         "aFf" 'feedjs
-        "aFu" 'feedjs-search-fetch-unread
-        "aFr" 'feedjs-search-refresh
         )
       )
     :config
     (progn
+      (spacemacs/declare-prefix-for-mode 'feedjs-search-mode "af" "feedjs")
       (spacemacs/set-leader-keys-for-major-mode 'feedjs-search-mode
-        "u" 'feedjs-search-fetch-unread
-        "r" 'feedjs-search-refresh
-        "return" 'feedjs-search-show-entry)
-      (spacemacs/set-leader-keys-for-major-mode 'feedjs-show-mode
-        "q" 'quit-window)
+        "afu" 'feedjs-search-fetch-unread
+        "afr" 'feedjs-search-refresh
+        )
+      (evil-define-key 'normal feedjs-search-mode-map
+        (kbd "r") 'feedjs-search-refresh
+        (kbd "x") 'feedjs-search-mark-atom-has-read
+        (kbd "o") 'feedjs-jump-to-atom-href
+        (kbd "<return>") 'feedjs-search-show-entry
+        (kbd "u") 'feedjs-search-fetch-unread)
+      (evil-define-key 'normal feedjs-show-mode-map
+        (kbd "q") 'quit-window)
      )))
 
 ;;; packages.el ends here

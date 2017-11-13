@@ -5,7 +5,7 @@
 
 (require 'message) ; faces
 
-(defvar emacs-feed-show-mode-map
+(defvar feedjs-show-mode-map
   (let ((map (make-sparse-keymap)))
     (prog1 map
       (suppress-keymap map)
@@ -18,9 +18,9 @@
 \\{elfeed-show-mode-map}"
   (interactive)
   (kill-all-local-variables)
-  (use-local-map emacs-feed-show-mode-map)
-  (setq major-mode 'emacs-feed-show-mode-map
-        mode-name "emacs-feed-show"
+  (use-local-map feedjs-show-mode-map)
+  (setq major-mode 'feedjs-show-mode-map
+        mode-name "feedjs-show-mode"
         buffer-read-only t)
   (buffer-disable-undo)
   (make-local-variable 'emacs-feed-show-entry)
@@ -44,7 +44,7 @@
                                feedjs-search-title-max-width)
                         :left)))
     (switch-to-buffer (get-buffer-create (format "* feed %s*" title)))
-    (unless (eq major-mode 'emacs-feed-show-mode-map)
+    (unless (eq major-mode 'feedjs-show-mode-map)
       (emacs-feed-show-mode))
     (setq emacs-feed-show-entry entry)
     (feed-show-refresh)))
