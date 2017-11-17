@@ -6,12 +6,17 @@
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
-;;; License: GPLv3 
+;;; License: GPLv3
 
 (defconst feedjs-packages
   '(
-    (emacs-feedjs :location local) 
+    (emacs-feedjs :location local)
     ))
+
+(defun feedjs/quick-and-switch-to-feedjs-search ()
+  (interactive)
+  (progn (quit-window)
+         (switch-to-buffer "*feedjs-search*")))
 
 (defun feedjs/init-emacs-feedjs ()
   "Initialize feedjs"
@@ -38,7 +43,7 @@
         (kbd "<return>") 'feedjs-search-show-entry
         (kbd "u") 'feedjs-search-fetch-unread)
       (evil-define-key 'normal feedjs-show-mode-map
-        (kbd "q") 'quit-window)
+        (kbd "q") 'feedjs/quick-and-switch-to-feedjs-search)
      )))
 
 ;;; packages.el ends here
