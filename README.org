@@ -1,0 +1,7 @@
+* Emacs Feedjs
+
+[fn:1] 一个 emacs 模仿 [[https://github.com/skeeto/elfeed][elfeed]] 的项目 
+
+[[./screen/WX20180625-092117@2x.png]]
+
+[[./screen/WX20180625-092053@2x.png]]
