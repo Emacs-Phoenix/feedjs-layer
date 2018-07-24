@@ -1,6 +1,7 @@
 * Emacs Feedjs
-
-[fn:1] 一个 emacs 模仿 [[https://github.com/skeeto/elfeed][elfeed]] 的项目 
+#+BEGIN_QUOTE
+一个 spacemacs 的 layer，用户在 Emacs 阅读 RSS 订阅源
+#+END_QUOTE
 
 [[./screen/WX20180625-092117@2x.png]]
 
