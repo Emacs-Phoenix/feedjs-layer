@@ -1,4 +1,4 @@
-* Emacs Feedjs
+* Emacs Feedjs Layer
 #+BEGIN_QUOTE
 一个 spacemacs 的 layer，用户在 Emacs 阅读 RSS 订阅源
 #+END_QUOTE
